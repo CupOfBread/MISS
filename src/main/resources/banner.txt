@@ -1,0 +1,10 @@
+${AnsiColor.BRIGHT_YELLOW}
+  __  __    _____     _____     _____
+ |  \/  |  |_   _|   / ____|   / ____|
+ | \  / |    | |    | (___    | (___
+ | |\/| |    | |     \___ \    \___ \
+ | |  | |   _| |_    ____) |   ____) |
+ |_|  |_|  |_____|  |_____/   |_____/
+
+                                   ${AnsiColor.WHITE}============= MISS v0.0.1 beta
+Spring Boot Version: ${spring-boot.version}
