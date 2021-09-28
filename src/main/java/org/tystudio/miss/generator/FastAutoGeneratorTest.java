@@ -1,13 +1,10 @@
 package org.tystudio.miss.generator;
 
-import java.sql.SQLException;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.generator.FastAutoGenerator;
 import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
-import com.baomidou.mybatisplus.generator.config.GlobalConfig;
 
-import java.util.function.Consumer;
 
 public class FastAutoGeneratorTest {
 
@@ -34,15 +31,17 @@ public class FastAutoGeneratorTest {
                         .enableCapitalMode()
                         .addTablePrefix("miss_")
                         .entityBuilder()
-                        .enableLombok()
                         .disableSerialVersionUID()
                         .enableChainModel()
                         .idType(IdType.AUTO)
+                        .enableLombok()
                         .controllerBuilder()
                         .enableRestStyle()
                         .serviceBuilder()
                         .formatServiceFileName("%sService")
                         .formatServiceImplFileName("%sServiceImp")
+                        .mapperBuilder()
+                        .enableMapperAnnotation()
                 )
                 .execute();
     }

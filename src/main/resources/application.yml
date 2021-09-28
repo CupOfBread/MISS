@@ -91,5 +91,4 @@ mybatis-plus:
     banner: false
   configuration:
     map-underscore-to-camel-case: true
-  mapper-locations: classpath:/Mapper/*.xml
   type-aliases-package: org.tystudio.miss.entity
