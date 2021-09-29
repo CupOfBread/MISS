@@ -6,8 +6,10 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import java.time.LocalDateTime;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import lombok.Data;
 import lombok.experimental.Accessors;
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * <p>
@@ -15,7 +17,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author Cup Of Bread
- * @since 2021-09-28
+ * @since 2021-09-29
  */
 @Data
 @Accessors(chain = true)
@@ -24,7 +26,7 @@ import lombok.experimental.Accessors;
 public class User {
 
     @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
+    private Long id;
 
     @ApiModelProperty("用户名")
     private String name;
@@ -42,7 +44,17 @@ public class User {
     private String phone;
 
     @ApiModelProperty("注册时间")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createTime;
+
+    @ApiModelProperty("群组id")
+    private Long groupId;
+
+    @ApiModelProperty("状态")
+    private String status;
+
+    @ApiModelProperty("用户组")
+    private Long userGroup;
 
 
 }

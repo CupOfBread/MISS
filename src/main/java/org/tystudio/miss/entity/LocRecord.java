@@ -3,15 +3,12 @@ package org.tystudio.miss.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
+import java.time.LocalDateTime;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.experimental.Accessors;
 import org.springframework.format.annotation.DateTimeFormat;
-
-import java.util.Date;
 
 /**
  * <p>
@@ -19,7 +16,7 @@ import java.util.Date;
  * </p>
  *
  * @author Cup Of Bread
- * @since 2021-09-28
+ * @since 2021-09-29
  */
 @Data
 @Accessors(chain = true)
@@ -28,19 +25,18 @@ import java.util.Date;
 public class LocRecord {
 
     @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
+    private Long id;
 
     @ApiModelProperty("用户id")
     private Integer userId;
 
     @ApiModelProperty("记录创建时间")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private String createTime;
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime createTime;
 
     @ApiModelProperty("定位成功时间")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private Date locTime;
+    private LocalDateTime locTime;
 
     @ApiModelProperty("定位精度")
     private Double radius;

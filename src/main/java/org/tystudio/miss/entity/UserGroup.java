@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -14,7 +15,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author Cup Of Bread
- * @since 2021-09-28
+ * @since 2021-09-29
  */
 @Data
 @Accessors(chain = true)
@@ -23,13 +24,10 @@ import lombok.experimental.Accessors;
 public class UserGroup {
 
     @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
+    private Long id;
 
     @ApiModelProperty("用户组名")
     private String name;
-
-    @ApiModelProperty("用户id")
-    private Integer userId;
 
 
 }

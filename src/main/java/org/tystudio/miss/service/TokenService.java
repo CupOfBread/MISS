@@ -1,7 +1,7 @@
 package org.tystudio.miss.service;
 
-import org.tystudio.miss.entity.Token;
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.tystudio.miss.entity.Token;
 
 /**
  * <p>
