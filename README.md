@@ -5,11 +5,11 @@
 ![](https://img.shields.io/github/repo-size/CupOfBread/MISS)
 [![](https://img.shields.io/github/stars/CupOfBread/MISS.svg?label=Stars&logo=github)](https://github.com/CupOfBread/MIMS/stargazers)
 
-Front-end part: [Front-end Part]()
+Front-end part(flutter): [Front-end Part](https://github.com/CupOfBread/MISS_flutter)
 
 ## Introduce
 
-这是 **念** 的后端项目。念是一款实时定位，形成分析，家人位置共享的平台。
+这是 **念** 的后端项目。念是一款实时定位，行程记录，家人位置共享的平台。
 
 ## Progress
 - [ ] 
